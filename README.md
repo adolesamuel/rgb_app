@@ -1,6 +1,10 @@
 # rgb_app
 
-A new Flutter project.
+An RGB slider app built in Flutter.
+
+This can be Built with the following guide.
+
+-[Install Flutter](https://flutter.dev/get-started/)
 
 ## Getting Started
 
