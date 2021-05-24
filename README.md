@@ -4,7 +4,13 @@ An RGB slider app built in Flutter.
 
 This can be Built with the following guide.
 
--[Install Flutter](https://flutter.dev/get-started/)
+- [Install Flutter](https://flutter.dev/get-started/)
+
+- Clone this repository
+
+- Start an Android Emulator in Android Studio or Connect an Android phone and allow usb debugging
+
+- flutter run on command line to run the project on an open emulator or connected android device
 
 ## Getting Started
 
