@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,6 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   double red = 255, green = 255, blue = 255;
   double opacity = 1;
+  double buttonWidth = 100;
 
   @override
   Widget build(BuildContext context) {
@@ -90,20 +93,38 @@ class _HomePageState extends State<HomePage> {
                         blue = value;
                       });
                     }),
-                ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        red = 255;
-                        blue = 255;
-                        green = 255;
-                      });
-                    },
-                    child: Text('Reset'))
+                Container(
+                  width: buttonWidth,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          red = 255;
+                          blue = 255;
+                          green = 255;
+                        });
+                      },
+                      child: Text('Reset')),
+                ),
+                Container(
+                  width: buttonWidth,
+                  child: ElevatedButton(
+                    onPressed: _randomizeValues,
+                    child: Text('Random'),
+                  ),
+                )
               ],
             ),
           ],
         ),
       ),
     );
+  }
+
+  _randomizeValues() {
+    Random rnd = Random();
+    red = rnd.nextInt(256).toDouble();
+    blue = rnd.nextInt(256).toDouble();
+    green = rnd.nextInt(256).toDouble();
+    setState(() {});
   }
 }
