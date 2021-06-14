@@ -93,6 +93,8 @@ class _HomePageState extends State<HomePage> {
                         blue = value;
                       });
                     }),
+
+                //reset colours
                 Container(
                   width: buttonWidth,
                   child: ElevatedButton(
@@ -105,6 +107,8 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text('Reset')),
                 ),
+
+                //Random Button
                 Container(
                   width: buttonWidth,
                   child: ElevatedButton(
