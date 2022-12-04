@@ -8,18 +8,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double red = 255, green = 255, blue = 255;
+  double red = 255, green = 0, blue = 0;
   double opacity = 1;
   double buttonWidth = 100;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Color.fromRGBO(red.round(), green.round(), blue.round(), opacity),
       appBar: AppBar(
         title: Text('Color Slider'),
       ),
+      backgroundColor:
+          Color.fromRGBO(red.round(), green.round(), blue.round(), opacity),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 16.0),
         height: MediaQuery.of(context).size.height,
